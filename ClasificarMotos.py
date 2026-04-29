@@ -1,9 +1,13 @@
+#Molde pra crear vehiculos
+
 class Categorizar_Motos:
     def __init__(self, marca: str, color: str, matricula: str, modelo: int):
         self.marca = marca
         self.color = color
         self.matricula = matricula
         self.modelo = modelo
+
+#Categorizar que tipo de vehiulo es
 
     def clasificar_tipo(self) -> str:
         if self.modelo < 3:
@@ -13,6 +17,8 @@ class Categorizar_Motos:
         else:
             return "Can-AM"
         
+ #Presentacion de la moto
+
     def presentar_moto(self) -> str:
         categoria = self.clasificar_tipo()
 
@@ -22,6 +28,13 @@ class Categorizar_Motos:
     
         return f"Hola, tengo una {categoria},marca {self.marca}, clor {self.color} con matricula {self.matricula} y modelo {self.modelo}."
 
+#Crear moto
+
 moto1 = Categorizar_Motos("Yamaha", "Gris", "PBB-21H", 2)
 
+
+#Imprimir creacion
+
 print(moto1.presentar_moto())
+
+
